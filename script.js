@@ -10,6 +10,7 @@ class FlowchartManager {
     init() {
         this.setupEventListeners();
         this.loadSampleData();
+        this.loadPositions(); // Carregar posições salvas
         this.renderFlowchart();
     }
 
@@ -143,6 +144,7 @@ class FlowchartManager {
         bubble.style.left = `${step.x}px`;
         bubble.style.top = `${step.y}px`;
         bubble.dataset.stepId = step.id;
+        bubble.draggable = true;
 
         bubble.innerHTML = `
             <div class="step-title">${step.title}</div>
@@ -150,6 +152,11 @@ class FlowchartManager {
         `;
 
         bubble.addEventListener('click', () => this.showStepDetails(step));
+        
+        // Adicionar funcionalidade de drag and drop
+        bubble.addEventListener('dragstart', (e) => this.handleDragStart(e, step));
+        bubble.addEventListener('dragend', (e) => this.handleDragEnd(e, step));
+        
         return bubble;
     }
 
@@ -354,6 +361,58 @@ class FlowchartManager {
         const currentIndex = this.currentStep ? this.steps.findIndex(s => s.id === this.currentStep.id) + 1 : 0;
         const total = this.steps.length;
         document.getElementById('progressIndicator').textContent = `Etapa ${currentIndex} de ${total}`;
+    }
+
+    handleDragStart(e, step) {
+        e.dataTransfer.setData('text/plain', step.id);
+        e.dataTransfer.effectAllowed = 'move';
+        e.target.style.opacity = '0.5';
+    }
+
+    handleDragEnd(e, step) {
+        e.target.style.opacity = '1';
+        
+        const flowchart = document.getElementById('flowchart');
+        const rect = flowchart.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Atualizar posição do step
+        step.x = Math.max(0, x - 50); // 50 é metade da largura do balão
+        step.y = Math.max(0, y - 25); // 25 é metade da altura do balão
+        
+        // Atualizar posição visual
+        e.target.style.left = `${step.x}px`;
+        e.target.style.top = `${step.y}px`;
+        
+        // Re-renderizar conexões
+        this.renderConnections();
+        
+        // Salvar posições no localStorage
+        this.savePositions();
+    }
+
+    savePositions() {
+        const positions = this.steps.map(step => ({
+            id: step.id,
+            x: step.x,
+            y: step.y
+        }));
+        localStorage.setItem('flowchartPositions', JSON.stringify(positions));
+    }
+
+    loadPositions() {
+        const saved = localStorage.getItem('flowchartPositions');
+        if (saved) {
+            const positions = JSON.parse(saved);
+            positions.forEach(pos => {
+                const step = this.steps.find(s => s.id === pos.id);
+                if (step) {
+                    step.x = pos.x;
+                    step.y = pos.y;
+                }
+            });
+        }
     }
 }
 

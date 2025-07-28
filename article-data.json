@@ -60,7 +60,7 @@
         "description": "Caracterização geográfica e hidrogeológica da ZV Tejo.",
         "details": "Descrever a Zona Vulnerável (ZV) do Tejo geográfica e hidrogeologicamente, incluindo características dos aquíferos (Aluviões do Tejo, MD, ME). Incluir mapa ou figura da região.",
         "level": 2,
-        "x": 600,
+        "x": 700,
         "y": 200,
         "connections": []
       },

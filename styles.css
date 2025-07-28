@@ -503,4 +503,24 @@ header p {
     .data-option textarea {
         height: 120px;
     }
+}
+
+/* Estilos para drag and drop */
+.step-bubble {
+    cursor: grab;
+}
+
+.step-bubble:active {
+    cursor: grabbing;
+}
+
+.step-bubble.dragging {
+    opacity: 0.5;
+    transform: scale(1.05);
+    z-index: 1000;
+}
+
+.step-bubble:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
 } 
