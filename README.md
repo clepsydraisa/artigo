@@ -1,6 +1,12 @@
 # Fluxograma Científico Dinâmico
 
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Site-brightgreen)](https://clepsydraisa.github.io/artigo/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Language](https://img.shields.io/badge/Language-Portuguese-red.svg)](README.md)
+
 Um fluxograma interativo e dinâmico para visualizar etapas de processos científicos, desenvolvido em HTML, CSS e JavaScript.
+
+🌐 **Acesse o site**: https://clepsydraisa.github.io/artigo/
 
 ## Características
 
@@ -85,12 +91,37 @@ Cada etapa tem a seguinte estrutura:
 - Informações aparecem no painel inferior
 - Animações suaves nas transições
 
-## Hospedagem no GitHub Pages
+## 🚀 Hospedagem no GitHub Pages
 
-1. Faça push do código para um repositório GitHub
-2. Vá para Settings > Pages
-3. Selecione a branch main como fonte
-4. O site estará disponível em `https://seu-usuario.github.io/seu-repositorio`
+O projeto está configurado para ser automaticamente publicado no GitHub Pages!
+
+### Acesso ao Site
+- **URL do Site**: https://clepsydraisa.github.io/artigo/
+- **Repositório**: https://github.com/clepsydraisa/artigo
+
+### Configuração Automática
+O projeto já está configurado com:
+- ✅ Workflow de deploy automático
+- ✅ Branch `main` como fonte
+- ✅ Deploy automático a cada push
+
+### Como Funciona
+1. Qualquer push para a branch `main` ativa o deploy automático
+2. O site é atualizado em poucos minutos
+3. Disponível publicamente para qualquer pessoa
+
+### Configuração Manual (se necessário)
+Se precisar configurar manualmente:
+1. Vá para **Settings** > **Pages** no repositório
+2. Selecione **Deploy from a branch**
+3. Escolha a branch **main**
+4. Clique **Save**
+
+### Personalização do Domínio
+Para usar um domínio personalizado:
+1. Vá para **Settings** > **Pages**
+2. Adicione o domínio em **Custom domain**
+3. Configure o DNS conforme instruções do GitHub
 
 ## Personalização Avançada
 
