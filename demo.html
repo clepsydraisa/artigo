@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração - Fluxograma Científico</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .demo-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .demo-code {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-list li:before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Demonstração - Fluxograma Científico</h1>
+            <p>Guia completo de utilização e funcionalidades</p>
+        </header>
+        
+        <div class="demo-section">
+            <h2>🎯 Funcionalidades Principais</h2>
+            <ul class="feature-list">
+                <li><strong>100 Etapas Sequenciais:</strong> Fluxograma completo com todas as etapas do processo</li>
+                <li><strong>Navegação Intuitiva:</strong> Controles de zoom e navegação para explorar o fluxo</li>
+                <li><strong>Informações Detalhadas:</strong> Clique em qualquer etapa para ver detalhes completos</li>
+                <li><strong>Design Responsivo:</strong> Funciona perfeitamente em desktop e mobile</li>
+                <li><strong>Exportação de Dados:</strong> Salve o fluxograma em formato JSON</li>
+                <li><strong>Animações Suaves:</strong> Transições fluidas e interações dinâmicas</li>
+            </ul>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🔧 Como Personalizar</h2>
+            <p>Para adicionar suas próprias etapas, use o console do navegador:</p>
+            
+            <div class="demo-code">
+// Adicionar nova etapa
+addFlowchartStep("Minha Etapa", "Descrição", "Detalhes completos", 1, 200, 150, [2, 3]);
+
+// Atualizar etapa existente
+updateFlowchartStep(1, { title: "Novo Título", level: 2 });
+
+// Remover etapa
+removeFlowchartStep(1);
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>📊 Estrutura dos Dados</h2>
+            <p>Cada etapa contém:</p>
+            <div class="demo-code">
+{
+    id: 1,                    // Identificador único
+    title: "Título",          // Nome da etapa
+    description: "Descrição",  // Descrição curta
+    details: "Detalhes",      // Informações completas
+    level: 1,                 // Nível hierárquico (1-5)
+    x: 100,                   // Posição X
+    y: 100,                   // Posição Y
+    connections: [2, 3]       // IDs das etapas conectadas
+}
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🎨 Níveis Hierárquicos</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 15px; border-radius: 10px;">
+                    <strong>Nível 1:</strong> Etapas principais
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; padding: 15px; border-radius: 10px;">
+                    <strong>Nível 2:</strong> Sub-etapas importantes
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; padding: 15px; border-radius: 10px;">
+                    <strong>Nível 3:</strong> Etapas secundárias
+                </div>
+                <div style="background: linear-gradient(135deg, #43e97b, #38f9d7); color: white; padding: 15px; border-radius: 10px;">
+                    <strong>Nível 4:</strong> Etapas de suporte
+                </div>
+                <div style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; padding: 15px; border-radius: 10px;">
+                    <strong>Nível 5:</strong> Etapas menores
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🚀 Acesso ao Fluxograma</h2>
+            <p>Clique no botão abaixo para aceder ao fluxograma completo:</p>
+            <a href="index.html" class="btn" style="display: inline-block; text-decoration: none; margin: 10px 0;">
+                🔗 Abrir Fluxograma Completo
+            </a>
+        </div>
+        
+        <div class="demo-section">
+            <h2>📱 Compatibilidade</h2>
+            <ul class="feature-list">
+                <li><strong>Chrome 60+</strong> - Funcionalidade completa</li>
+                <li><strong>Firefox 55+</strong> - Funcionalidade completa</li>
+                <li><strong>Safari 12+</strong> - Funcionalidade completa</li>
+                <li><strong>Edge 79+</strong> - Funcionalidade completa</li>
+                <li><strong>Mobile</strong> - Design responsivo otimizado</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

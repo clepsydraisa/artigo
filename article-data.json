@@ -1,0 +1,350 @@
+{
+  "articleTitle": "Fluxograma para o Desenvolvimento de um Artigo Científico: Previsão do GWL na ZV Tejo",
+  "author": "Autor do Artigo",
+  "year": "2024",
+  "flowchart": {
+    "steps": [
+      {
+        "id": 1,
+        "title": "1. Introdução",
+        "description": "Visão geral do artigo científico, abordando o problema, revisão e objetivos.",
+        "details": "Esta seção estabelece o cenário para o estudo, detalhando a importância da gestão da água subterrânea, os desafios específicos da ZV Tejo e a relevância da previsão do GWL. Inclui também uma revisão das abordagens de Machine Learning e Deep Learning aplicadas à previsão do GWL e os objetivos específicos do estudo.",
+        "level": 1,
+        "x": 400,
+        "y": 50,
+        "connections": [2, 3, 4]
+      },
+      {
+        "id": 2,
+        "title": "1.1. Contextualização do Problema",
+        "description": "Importância e desafios da gestão sustentável da água subterrânea na ZV Tejo.",
+        "details": "Explicar a importância da gestão sustentável da água subterrânea em áreas agrícolas. Apresentar os desafios específicos da ZV Tejo, considerando os aquíferos Aluviões do Tejo, Margem Direita (MD) e Margem Esquerda (ME). Destacar a relevância da previsão do GWL para decisões em recursos hídricos.",
+        "level": 2,
+        "x": 200,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 3,
+        "title": "1.2. Revisão Bibliográfica",
+        "description": "Abordagens de ML/DL para previsão de GWL e lacunas na literatura.",
+        "details": "Resumir abordagens de machine learning (ML) e deep learning (DL) para previsão de GWL (e.g., Random Forest, XGBoost, LSTM) com base em estudos como Lee et al. (2022), Feng et al. (2024) e Wunsch et al. (2021). Identificar lacunas na literatura que o estudo aborda (e.g., foco na ZV Tejo).",
+        "level": 2,
+        "x": 400,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 4,
+        "title": "1.3. Objetivo do Estudo",
+        "description": "Prever o GWL na ZV Tejo usando dados históricos e técnicas de ML.",
+        "details": "Prever o GWL na ZV Tejo (Aluviões do Tejo, MD e ME) usando dados históricos e técnicas de ML.",
+        "level": 2,
+        "x": 600,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 5,
+        "title": "2. Materiais e Métodos",
+        "description": "Metodologia completa do estudo, desde a área de estudo até a modelagem preditiva.",
+        "details": "Esta seção descreve a metodologia completa do estudo, incluindo a caracterização da área de estudo, coleta e processamento de dados, análise exploratória, seleção de variáveis e modelagem preditiva com algoritmos de Machine Learning e Deep Learning.",
+        "level": 1,
+        "x": 800,
+        "y": 50,
+        "connections": [6, 7, 8, 9, 10, 11]
+      },
+      {
+        "id": 6,
+        "title": "2.1. Área de Estudo",
+        "description": "Caracterização geográfica e hidrogeológica da ZV Tejo.",
+        "details": "Descrever a Zona Vulnerável (ZV) do Tejo geográfica e hidrogeologicamente, incluindo características dos aquíferos (Aluviões do Tejo, MD, ME). Incluir mapa ou figura da região.",
+        "level": 2,
+        "x": 600,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 7,
+        "title": "2.2. Fonte e Recolha de Dados",
+        "description": "Sistema Nacional de Informação de Recursos Hídricos (SNIRH).",
+        "details": "Especificar a fonte: Sistema Nacional de Informação de Recursos Hídricos (SNIRH). Detalhar variáveis: precipitação, nível piezométrico, condutividade elétrica, nitratos e caudal. Informar período e frequência dos dados (diária/mensal, conforme disponível). Descrever centralização em base de dados relacional (PostgreSQL).",
+        "level": 2,
+        "x": 800,
+        "y": 200,
+        "connections": [12, 13, 14]
+      },
+      {
+        "id": 8,
+        "title": "2.3. Pré-processamento de Dados",
+        "description": "Limpeza, agregação e análise de tendências dos dados.",
+        "details": "Processo completo de preparação dos dados, incluindo limpeza de valores em falta e outliers, agregação e normalização para resolução temporal consistente, e análise de tendências temporais usando testes estatísticos.",
+        "level": 2,
+        "x": 1000,
+        "y": 200,
+        "connections": [15, 16, 17]
+      },
+      {
+        "id": 9,
+        "title": "2.4. Análise Exploratória de Dados (EDA)",
+        "description": "Visualização e análise exploratória das séries temporais.",
+        "details": "Visualizar séries temporais (gráficos de precipitação, GWL, etc.). Calcular correlações (Pearson/Spearman) entre variáveis. Identificar padrões sazonais e anomalias.",
+        "level": 2,
+        "x": 1200,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 10,
+        "title": "2.5. Seleção de Variáveis",
+        "description": "Técnicas de correlação e Random Forest feature importance.",
+        "details": "Usar técnicas como correlação e Random Forest feature importance. Justificar variáveis incluídas/excluídas no modelo preditivo.",
+        "level": 2,
+        "x": 1400,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 11,
+        "title": "2.6. Modelagem Preditiva",
+        "description": "Seleção, treinamento e avaliação de modelos ML/DL.",
+        "details": "Processo completo de modelagem preditiva, desde a seleção de algoritmos adequados para séries temporais até a avaliação de desempenho com métricas apropriadas.",
+        "level": 2,
+        "x": 1600,
+        "y": 200,
+        "connections": [18, 19, 20, 21]
+      },
+      {
+        "id": 12,
+        "title": "2.2.1. Limpeza de Dados",
+        "description": "Tratamento de valores em falta e outliers.",
+        "details": "Tratar valores em falta (interpolação ou médias). Corrigir outliers identificados.",
+        "level": 3,
+        "x": 600,
+        "y": 350,
+        "connections": []
+      },
+      {
+        "id": 13,
+        "title": "2.2.2. Agregação e Normalização",
+        "description": "Agregação para resolução temporal consistente.",
+        "details": "Agregar dados para resolução temporal consistente (e.g., mensal). Normalizar/padronizar variáveis para modelos ML.",
+        "level": 3,
+        "x": 800,
+        "y": 350,
+        "connections": []
+      },
+      {
+        "id": 14,
+        "title": "2.2.3. Análise de Tendências",
+        "description": "Testes estatísticos para tendências temporais.",
+        "details": "Aplicar testes estatísticos (Mann-Kendall, Seasonal Mann-Kendall) para tendências temporais. Segmentar séries temporais baseado em gaps (mínimo 24 meses).",
+        "level": 3,
+        "x": 1000,
+        "y": 350,
+        "connections": []
+      },
+      {
+        "id": 15,
+        "title": "2.3.1. Limpeza de Dados",
+        "description": "Tratamento de valores em falta e outliers.",
+        "details": "Tratar valores em falta (interpolação ou médias). Corrigir outliers identificados.",
+        "level": 3,
+        "x": 900,
+        "y": 350,
+        "connections": []
+      },
+      {
+        "id": 16,
+        "title": "2.3.2. Agregação e Normalização",
+        "description": "Agregação para resolução temporal consistente.",
+        "details": "Agregar dados para resolução temporal consistente (e.g., mensal). Normalizar/padronizar variáveis para modelos ML.",
+        "level": 3,
+        "x": 1100,
+        "y": 350,
+        "connections": []
+      },
+      {
+        "id": 17,
+        "title": "2.3.3. Análise de Tendências",
+        "description": "Testes estatísticos para tendências temporais.",
+        "details": "Aplicar testes estatísticos (Mann-Kendall, Seasonal Mann-Kendall) para tendências temporais. Segmentar séries temporais baseado em gaps (mínimo 24 meses).",
+        "level": 3,
+        "x": 1300,
+        "y": 350,
+        "connections": []
+      },
+      {
+        "id": 18,
+        "title": "2.6.1. Seleção de Modelos",
+        "description": "Escolha de algoritmos ML/DL adequados.",
+        "details": "Escolher algoritmos de ML/DL (e.g., Random Forest, XGBoost, LSTM) adequados a séries temporais.",
+        "level": 3,
+        "x": 1400,
+        "y": 350,
+        "connections": []
+      },
+      {
+        "id": 19,
+        "title": "2.6.2. Divisão dos Dados",
+        "description": "Treino (70%), validação (15%) e teste (15%).",
+        "details": "Dividir em treino (70%), validação (15%) e teste (15%), evitando vazamento temporal.",
+        "level": 3,
+        "x": 1600,
+        "y": 350,
+        "connections": []
+      },
+      {
+        "id": 20,
+        "title": "2.6.3. Treinamento e Validação",
+        "description": "Ajuste de hiperparâmetros e validação cruzada.",
+        "details": "Ajustar hiperparâmetros (grid search/random search). Usar validação cruzada temporal.",
+        "level": 3,
+        "x": 1800,
+        "y": 350,
+        "connections": []
+      },
+      {
+        "id": 21,
+        "title": "2.6.4. Avaliação de Desempenho",
+        "description": "Cálculo de métricas e comparação de modelos.",
+        "details": "Calcular métricas (RMSE, MAE, R²). Comparar modelos e selecionar o melhor.",
+        "level": 3,
+        "x": 2000,
+        "y": 350,
+        "connections": []
+      },
+      {
+        "id": 22,
+        "title": "3. Resultados",
+        "description": "Apresentação dos resultados obtidos com os modelos de previsão.",
+        "details": "Esta seção apresenta os resultados obtidos com os modelos de Machine Learning e Deep Learning aplicados à previsão do GWL na ZV Tejo, incluindo comparações de desempenho e análise dos resultados.",
+        "level": 1,
+        "x": 2200,
+        "y": 50,
+        "connections": [23, 24, 25]
+      },
+      {
+        "id": 23,
+        "title": "3.1. Desempenho dos Modelos",
+        "description": "Comparação de métricas entre diferentes algoritmos.",
+        "details": "Apresentar tabelas e gráficos comparando o desempenho dos diferentes modelos (Random Forest, XGBoost, LSTM) usando métricas como RMSE, MAE e R². Identificar o melhor modelo para cada cenário.",
+        "level": 2,
+        "x": 2000,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 24,
+        "title": "3.2. Análise de Previsões",
+        "description": "Interpretação das previsões de GWL obtidas.",
+        "details": "Analisar as previsões de GWL obtidas pelos melhores modelos, incluindo padrões temporais, sazonalidade e tendências identificadas. Comparar com dados históricos reais.",
+        "level": 2,
+        "x": 2200,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 25,
+        "title": "3.3. Validação dos Resultados",
+        "description": "Verificação da robustez e confiabilidade dos modelos.",
+        "details": "Validar os resultados usando dados de teste independentes, análise de resíduos e testes de significância estatística para garantir a confiabilidade das previsões.",
+        "level": 2,
+        "x": 2400,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 26,
+        "title": "4. Discussão",
+        "description": "Interpretação dos resultados e implicações para a gestão da água.",
+        "details": "Esta seção discute os resultados obtidos, comparando-os com a literatura existente, analisando as implicações para a gestão da água na ZV Tejo e identificando as limitações do estudo.",
+        "level": 1,
+        "x": 2600,
+        "y": 50,
+        "connections": [27, 28, 29]
+      },
+      {
+        "id": 27,
+        "title": "4.1. Interpretação dos Resultados",
+        "description": "Comparação com literatura e avaliação da eficácia.",
+        "details": "Comparar com a literatura (e.g., XGBoost em Lee et al., 2022; LSTM em Wunsch et al., 2021). Avaliar eficácia e aplicabilidade do modelo.",
+        "level": 2,
+        "x": 2400,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 28,
+        "title": "4.2. Implicações para a Gestão da Água",
+        "description": "Aplicação prática das previsões na gestão de recursos hídricos.",
+        "details": "Explicar como as previsões de GWL podem orientar políticas na ZV Tejo. Sugerir medidas contra sobreexploração ou contaminação.",
+        "level": 2,
+        "x": 2600,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 29,
+        "title": "4.3. Limitações do Estudo",
+        "description": "Identificação e discussão das limitações metodológicas.",
+        "details": "Discutir lacunas nos dados e limitações dos modelos. Identificar possíveis melhorias futuras e direções de investigação.",
+        "level": 2,
+        "x": 2800,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 30,
+        "title": "5. Conclusão",
+        "description": "Resumo dos achados principais e propostas para trabalhos futuros.",
+        "details": "Esta seção resume os achados principais do estudo, reforça a importância da previsão do GWL para a gestão sustentável dos recursos hídricos na ZV Tejo e propõe direções para investigações futuras.",
+        "level": 1,
+        "x": 3000,
+        "y": 50,
+        "connections": [31, 32, 33]
+      },
+      {
+        "id": 31,
+        "title": "5.1. Resumo dos Achados",
+        "description": "Síntese dos resultados principais obtidos.",
+        "details": "Resumir achados principais. Destacar as contribuições mais significativas do estudo para a previsão do GWL na ZV Tejo.",
+        "level": 2,
+        "x": 2800,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 32,
+        "title": "5.2. Importância da Previsão",
+        "description": "Relevância dos resultados para a gestão de recursos hídricos.",
+        "details": "Reforçar a importância da previsão do GWL. Explicar como os resultados contribuem para a gestão sustentável dos recursos hídricos na região.",
+        "level": 2,
+        "x": 3000,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 33,
+        "title": "5.3. Trabalhos Futuros",
+        "description": "Propostas para investigações e melhorias futuras.",
+        "details": "Propor trabalhos futuros (e.g., mais variáveis, novos modelos). Identificar áreas de investigação que podem expandir e melhorar os resultados obtidos.",
+        "level": 2,
+        "x": 3200,
+        "y": 200,
+        "connections": []
+      },
+      {
+        "id": 34,
+        "title": "6. Referências",
+        "description": "Lista completa de todas as fontes citadas no artigo.",
+        "details": "Listar todas as fontes citadas (e.g., APA ou IEEE), incluindo Lee et al. (2022), Feng et al. (2024), etc. Garantir que todas as referências mencionadas no texto estejam incluídas e formatadas adequadamente.",
+        "level": 1,
+        "x": 3400,
+        "y": 50,
+        "connections": []
+      }
+    ]
+  },
+  "instructions": "Artigo científico completo sobre previsão do GWL na ZV Tejo, incluindo todas as seções: Introdução, Materiais e Métodos, Resultados, Discussão, Conclusão e Referências."
+} 

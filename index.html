@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxograma Científico - Artigo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="articleTitle">Fluxograma Científico</h1>
+            <p id="articleAuthor">Visualização dinâmica das etapas do processo</p>
+        </header>
+        
+        <div class="controls">
+            <button id="addStep" class="btn">Adicionar Etapa</button>
+            <button id="resetFlow" class="btn">Resetar Fluxo</button>
+            <button id="exportFlow" class="btn">Exportar</button>
+            <button id="loadData" class="btn">📁 Carregar Dados</button>
+            <button id="validateData" class="btn">✅ Validar</button>
+        </div>
+        
+        <div class="flowchart-nav">
+            <button id="zoomIn" class="btn">🔍+</button>
+            <button id="zoomOut" class="btn">🔍-</button>
+            <button id="goToStart" class="btn">⏮️ Início</button>
+            <button id="goToEnd" class="btn">⏭️ Fim</button>
+        </div>
+        
+        <div class="flowchart-container">
+            <div id="flowchart" class="flowchart">
+                <!-- Os balões do fluxograma serão inseridos aqui dinamicamente -->
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h3>Informações da Etapa</h3>
+            <div id="stepInfo" class="step-info">
+                <p>Clique num balão para ver os detalhes</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Indicador de progresso -->
+    <div class="progress-indicator" id="progressIndicator">
+        Etapa 0 de 0
+    </div>
+    
+    <!-- Controles de zoom flutuantes -->
+    <div class="zoom-controls">
+        <button class="zoom-btn" id="zoomInFloat">+</button>
+        <button class="zoom-btn" id="zoomOutFloat">-</button>
+        <button class="zoom-btn" id="resetZoom">⟲</button>
+    </div>
+    
+    <!-- Modal para carregar dados -->
+    <div id="dataModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carregar Dados do Artigo</h2>
+            <div class="modal-body">
+                <p>Escolha uma opção para carregar os dados do seu artigo:</p>
+                
+                <div class="data-option">
+                    <h3>1. Carregar arquivo JSON</h3>
+                    <input type="file" id="jsonFile" accept=".json">
+                    <button id="loadJsonBtn" class="btn">Carregar JSON</button>
+                </div>
+                
+                <div class="data-option">
+                    <h3>2. Inserir dados manualmente</h3>
+                    <textarea id="manualData" placeholder="Cole aqui os dados JSON do seu artigo..."></textarea>
+                    <button id="loadManualBtn" class="btn">Carregar Dados</button>
+                </div>
+                
+                <div class="data-option">
+                    <h3>3. Usar dados de exemplo</h3>
+                    <button id="loadSampleBtn" class="btn">Carregar Exemplo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="data-loader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
